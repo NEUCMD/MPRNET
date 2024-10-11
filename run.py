@@ -30,7 +30,7 @@ if __name__ == '__main__':
                         help='task name, options:[long_term_forecast, short_term_forecast, imputation, classification, anomaly_detection, fault_prediction, rul, reconstruct, contrast]')
     parser.add_argument('--is_training', type=int,  default=0, help='status')
     parser.add_argument('--model_id', type=str,  default='test', help='model id')
-    parser.add_argument('--model', type=str,  default='PatchTST',
+    parser.add_argument('--model', type=str,  default='MPRNET',
                         help='model name, options: [Autoformer, Transformer, iTransformer, Stateformer, TimesNet, DLinear, PatchTST, FEDformer, Pyraformer, Nonstationary_Transformer, retnet, SSSM]')
 
     # data loader

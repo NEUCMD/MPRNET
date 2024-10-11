@@ -259,10 +259,6 @@ class MultiScaleRetention(nn.Module):
                                                                      inner_decay=inner_decay)
                 ret_chunks_3.append(out_chunk)
             # [bsz, num_head, seqlen, v_dim]
-            ##TODO确认该数据维度，好决定如何拼接
-            print('ret_chunks_1:',ret_chunks_1.shape)
-            print('ret_chunks_2:',ret_chunks_2.shape)
-            print('ret_chunks_3:',ret_chunks_3.shape)
             retention_out = torch.cat([ret_chunks_1,ret_chunks_2,ret_chunks_3], dim=2)
             print('retention_out:',retention_out.shape)
             curr_kv = past_key_value

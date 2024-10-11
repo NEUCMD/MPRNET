@@ -1,6 +1,6 @@
 import os
 import torch
-from models import Autoformer, Transformer, iTransformer, TimesNet, Nonstationary_Transformer, DLinear, FEDformer, \
+from models import MPRNET, Autoformer, Transformer, iTransformer, TimesNet, Nonstationary_Transformer, DLinear, FEDformer, \
     Informer, LightTS, Reformer, ETSformer, Pyraformer, PatchTST, PatchTST_GAT, MICN, Crossformer, FiLM, \
     Tide, Stateformer, Stateformer_ms, Stateformer_GAT, retnet, retnet_gat, retnet_inverted, GRU, TCN, STGCN, LSTM, NoPatch, Explor, SSSM
 
@@ -9,6 +9,7 @@ class Exp_Basic(object):
     def __init__(self, args):
         self.args = args
         self.model_dict = {
+            'MPRNET': MPRNET,
             'TimesNet': TimesNet,
             'Autoformer': Autoformer,
             'Transformer': Transformer,
